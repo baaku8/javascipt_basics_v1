@@ -9,6 +9,7 @@ let empty;
 //string
 //null
 //bigInt
+//symbol->unique
  
 //typeof is used to know the type of datatype used.
 // console.log(typeof empty); //undefined
