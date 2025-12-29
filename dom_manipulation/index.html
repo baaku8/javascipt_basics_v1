@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom_manipulation</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1 id ="head1" , class="Heading">Heading</h1>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro provident.</p>
+    <ul class="listPehla">
+        <li>pehla</li>
+    </ul>
+</body>
+<script>
+    const newSubhead=document.createElement('h2');
+    newSubhead.appendChild(document.createTextNode("Hello vai this is the subheading"));
+    document.querySelector('body').appendChild(newSubhead);
+    function listAdder(element){
+        const li=document.createElement('li');
+        li.appendChild(document.createTextNode(`${element}`));
+        document.querySelector('.listPehla').appendChild(li);
+    }
+    listAdder('Javascript');
+    listAdder('MongoDB');
+    listAdder('NextJs');
+    // console.log(document.querySelector('.listPehla').children[2].textContent)
+    listAdder('Golang');
+</script>
+</html>
