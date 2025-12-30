@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai ke saath code</title>
+</head>
+<body style="
+background-color: #212121;
+color:azure">
+    <div class="parentDay">
+        <div class="day1">Monday</div>
+        <div class="day2">Tuesday</div>
+        <div class="day3">Wednesday</div>
+        <div class="day4">Thrusday</div>
+    </div>
+</body>
+<script>
+   const parent= document.querySelector('.parentDay');
+//    console.log(parent);     ///selects the div parentDay  
+//    console.log(parent.children);   ///parent.children returns an HTML Collection, mostly like an array.
+//    console.log(parent.firstElementChild.innerHTML);    ///other properties
+  //loops on parentDiv
+   for(let i=0;i<parent.children.length;i++){
+    //   console.log(parent.children[i].innerHTML);
+   }
+   // Ek baat dhyan dena ki querySelector jo operation hae wo boht costly hae. It traverses through the whole DOM tree.
+   //So we use certain optimization methods to avoid repetative query selections
+// console.log(parent.children[0].parentElement);   parent select krne ke liye is children is given
+//    console.log(parent.children[1].nextElementSibling.innerHTML);  next sibling find krne ke liye
+// console.log('NODE: ',parent.childNodes); //very important ,,actually idhr real tree structure hota he, so idhr div mae -
+                                        //jo next line ka space hae wo bhi idhr count hota he asa a textNode\
+const div= document.createElement('div');
+// div.id="divID";
+// div.className='divClass';  // not a good practice , as idhr pehle div.className ko laya jata hae phir dit kiya jata hae. 2Round Trip
+div.setAttribute('id','newdivID');   // this is a recommended practice
+div.appendChild(document.createTextNode("ye hae ek div"));
+div.style.color="azure";
+div.style.backgroundColor='orange';
+div.style.padding='4px'
+document.body.appendChild(div);
+// console.log(div);        
+
+
+//editing values
+const day2=document.querySelector('.day2');
+const newday2=document.createElement(day2.tagName);   //isse pta chl jayega originally day2 kya type ka element tha. 
+// console.log(day2.tagName);
+newday2.appendChild(document.createTextNode('MongolBaar'));
+day2.replaceWith(newday2);    //replace with as the name suggests
+
+//removing values
+const day3=document.querySelector('.day3');
+// day3.remove();  //remove() functions simply remove it from the tree
+</script>
+</html>

@@ -1,0 +1,45 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+}
+
+body{
+   background-color: #212121; 
+   color:beige;
+}
+.parent{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:60px;
+    height:100vh
+    
+}
+.boxes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.box{
+ height:60px;
+ width:60px;
+ border-radius: 50%;
+ background-color: bisque;
+ border:1px solid black;
+}
+#pehla{
+    background-color: blueviolet;
+}
+#dusra{
+    background-color:cadetblue;
+}
+#tisra{
+    background-color:darkkhaki;
+}
+#forth{
+    background-color:brown;
+}
+
